@@ -17,7 +17,7 @@
  */
 package org.ladysnake.sincereloyalty.storage;
 
-import net.fabricmc.fabric.api.util.NbtType;
+import net.minecraft.nbt.NbtElement;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
@@ -81,7 +81,7 @@ public final class OwnedTridents implements Iterable<TridentEntry> {
     }
 
     public void fromTag(NbtCompound ownerNbt) {
-        NbtList tridentsNbt = ownerNbt.getList("tridents", NbtType.COMPOUND);
+        NbtList tridentsNbt = ownerNbt.getList("tridents", NbtElement.COMPOUND_TYPE);
         for (int j = 0; j < tridentsNbt.size(); j++) {
             TridentEntry trident = TridentEntry.fromNbt(this.parentStorage.world, tridentsNbt.getCompound(j));
             if (trident != null) {

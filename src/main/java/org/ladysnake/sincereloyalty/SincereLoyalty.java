@@ -26,6 +26,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.item.Item;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
@@ -39,13 +40,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import org.ladysnake.impaled.common.Impaled;
 import org.ladysnake.sincereloyalty.storage.LoyalTridentStorage;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.UUID;
 
 public final class SincereLoyalty implements ModInitializer {
 
-    public static final String MOD_ID = Impaled.MODID;
+    public static final String MODID = Impaled.MODID;
+    public static final Logger LOGGER = Impaled.LOGGER;
 
     public static final TagKey<Item> TRIDENTS = TagKey.of(RegistryKeys.ITEM, id("tridents"));
 
@@ -72,7 +75,7 @@ public final class SincereLoyalty implements ModInitializer {
     );
 
     public static Identifier id(String path) {
-        return new Identifier(MOD_ID, path);
+        return new Identifier(MODID, path);
     }
 
     @Override

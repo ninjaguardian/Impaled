@@ -80,6 +80,18 @@ public class LoyaltyBindingRecipe implements SmithingRecipe {
         return this.id;
     }
 
+    public Ingredient getBase() {
+        return this.base;
+    }
+
+    public Ingredient getTemplate() {
+        return this.template;
+    }
+
+    public Ingredient getAddition() {
+        return this.addition;
+    }
+
     @Override
     public boolean matches(Inventory inventory, World world) {
         return this.template.test(inventory.getStack(0)) && this.base.test(inventory.getStack(1)) && this.addition.test(inventory.getStack(2)) && isLoyalEnough(inventory.getStack(1));

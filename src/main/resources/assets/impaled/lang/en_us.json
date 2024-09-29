@@ -20,5 +20,9 @@
   "item.impaled.smithing_template.trident_upgrade.applies_to": "Tridents",
   "item.impaled.smithing_template.trident_upgrade.base_slot_description": "Add a trident",
   "item.impaled.smithing_template.trident_upgrade.ingredients": "Enchanted Apple, Guardian Eye, or Ancient Trident",
-  "upgrade.impaled.trident_upgrade": "Trident Upgrade"
+  "upgrade.impaled.trident_upgrade": "Trident Upgrade",
+  "itemGroup.impaled": "Impaled",
+  "tag.item.c.coral_blocks": "Coral Blocks",
+  "tag.item.impaled.tridents": "Tridents",
+  "tag.item.impaled.loyalty_catalysts": "Loyalty Catalysts"
 }
